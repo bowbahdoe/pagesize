@@ -10,7 +10,9 @@ public final class PageSize {
     private PageSize() {}
 
     private static final IntSupplier GETTER
-            = System.getProperty("os.name").contains("win")
+            = System.getProperty("os.name")
+                .toLowerCase()
+                .contains("win")
             ? new Win()
             : new Nix();
 
