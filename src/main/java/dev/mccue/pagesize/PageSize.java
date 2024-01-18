@@ -1,7 +1,5 @@
 package dev.mccue.pagesize;
 
-import com.mysql.cj.jdbc.MysqlDataSource;
-
 import java.lang.foreign.*;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.MethodHandles;
@@ -96,7 +94,6 @@ public final class PageSize {
     }
 
     public static int get() {
-        MysqlDataSource
         return GETTER.getAsInt();
     }
 }
